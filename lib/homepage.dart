@@ -102,9 +102,9 @@ class _HomePageState extends State<HomePage> {
 
                 Map<String, dynamic> data =
                 document.data() as Map<String, dynamic>;
-                String noteTitle = data['title'];
-                String noteContent = data['content'];
-                String noteLocation = data['location'];
+                String noteTitle = data['title']??'';
+                String noteContent = data['content']??'';
+                String noteLocation = data['location']??'';
 
                 var listTile = ListTile(
                   title: Text(noteTitle),
